@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table>
+        <tbody>
+            <tr>
+                <td><img id="a1"src="xe1.png" onclick="change1()"></td>
+            </tr>
+            <tr>
+                <td><img id="a2" src="m2.png" onclick="change2()" ></td>
+            </tr>
+            <tr>
+                <td><img id="a3" src="m3.png" onclick="change3()" ></td>
+            </tr>
+
+        </tbody>
+
+    </table>
+    <script>
+    // let i=1;
+    //     function change1() {
+            
+    //         let img1=[
+    //         'xe1.png' ,
+    //         'g1.png' ,
+    //         'm1.png' ,
+    //         ]
+    //         document.getElementById("a1").src=img1[i]
+    //         i++;
+    //         if(i==3){i=0}
+    //         if(document.getElementById("a1").src==''){alert('h')}
+    //     }
+    // let ii=1;
+    //     function change2() {
+            
+    //         let img2=[
+    //         'xe2.png' ,
+    //         'g2.png' ,
+    //         'm2.png' ,
+    //         ]
+    //         document.getElementById("a2").src=img2[ii]
+    //         ii++;
+    //         if(ii==3){ii=0}
+    //         if((document.getElementById("a1").src=='xe1.png')&&(document.getElementById("a2").src=='xe2.png')&&(document.getElementById("a3").src=='xe3.png')){alert('ok')}
+    //     }
+    //     let i3=1;    
+    //     function change3() {
+            
+    //         let img3=[
+    //         'xe3.png' ,
+    //         'g3.png' ,
+    //         'm3.png' ,
+    //         ]
+    //         document.getElementById("a3").src=img3[i3]
+    //         i3++;
+    //         if(i3==3){i3=0}
+    //         if((document.getElementById("a1").src=='xe1.png')&&(document.getElementById("a2").src=='xe2.png')&&(document.getElementById("a3").src=='xe3.png')){alert('ok')}
+    //     }
+    //     if((document.getElementById("a1").src=='xe1.png')&&(document.getElementById("a2").src=='xe2.png')&&(document.getElementById("a2").src=='xe2.png')){alert('ok')}
+    //  function change1() {
+    //     let radom =Math.floor(Math.random() * 2)
+    //   if(document.getElementById('a1').src=='http://127.0.0.1:5500/xe1.png'){
+    //if(radom==0){document.getElementById('a1').src='m1.png'}else{document.getElementById('a1').src='g1.png'}
+    //   } else{if(document.getElementById('a1').src='http://127.0.0.1:5500/m1.png'){if(radom==0){document.getElementById('a1').src='xe1.png'}else{document.getElementById('a1').src='g1.png'}}
+    //  else{if(radom==0){document.getElementById('a1').src='m1.png'}else{document.getElementById('a1').src='xe1.png'}}}
+    // }
+    function change1() {
+        let radom= Math.floor(Math.random() * 2)
+        
+        if(document.getElementById('a1').src=='http://127.0.0.1:5500/xe1.png'){
+            if(radom==0){document.getElementById('a1').src='m1.png'}else{document.getElementById('a1').src='g1.png'}
+        }else if(document.getElementById('a1').src=='http://127.0.0.1:5500/m1.png'){
+                if(radom==0){document.getElementById('a1').src='xe1.png'}else{document.getElementById('a1').src='g1.png'}
+            }else{if(radom==0){document.getElementById('a1').src='xe1.png'}else{document.getElementById('a1').src='m1.png'}}
+        if(document.getElementById('a1').src=='http://127.0.0.1:5500/xe1.png'&& document.getElementById('a2').src=='http://127.0.0.1:5500/xe2.png'&&document.getElementById('a3').src=='http://127.0.0.1:5500/xe3.png'){
+            alert('chucmung')}
+        if(document.getElementById('a1').src=='http://127.0.0.1:5500/m1.png'&& document.getElementById('a2').src=='http://127.0.0.1:5500/m2.png'&&document.getElementById('a3').src=='http://127.0.0.1:5500/m3.png'){
+            alert('chucmung')}
+        if(document.getElementById('a1').src=='http://127.0.0.1:5500/g1.png'&& document.getElementById('a2').src=='http://127.0.0.1:5500/g2.png'&&document.getElementById('a3').src=='http://127.0.0.1:5500/g3.png'){
+            alert('chucmung')}
+        }
+    function change2() {
+        let radom= Math.floor(Math.random() * 2)
+        
+        if(document.getElementById('a2').src=='http://127.0.0.1:5500/xe2.png'){
+            if(radom==0){document.getElementById('a2').src='m2.png'}else{document.getElementById('a2').src='g2.png'}
+        }else if(document.getElementById('a2').src=='http://127.0.0.1:5500/m2.png'){
+                if(radom==0){document.getElementById('a2').src='xe2.png'}else{document.getElementById('a2').src='g2.png'}
+            }else{if(radom==0){document.getElementById('a2').src='xe2.png'}else{document.getElementById('a2').src='m2.png'}}
+            if(document.getElementById('a1').src=='http://127.0.0.1:5500/xe1.png'&& document.getElementById('a2').src=='http://127.0.0.1:5500/xe2.png'&&document.getElementById('a3').src=='http://127.0.0.1:5500/xe3.png'){
+            alert('chucmung')}
+        if(document.getElementById('a1').src=='http://127.0.0.1:5500/m1.png'&& document.getElementById('a2').src=='http://127.0.0.1:5500/m2.png'&&document.getElementById('a3').src=='http://127.0.0.1:5500/m3.png'){
+            alert('chucmung')}
+        if(document.getElementById('a1').src=='http://127.0.0.1:5500/g1.png'&& document.getElementById('a2').src=='http://127.0.0.1:5500/g2.png'&&document.getElementById('a3').src=='http://127.0.0.1:5500/g3.png'){
+            alert('chucmung')}
+        }
+    function change3() {
+        let radom= Math.floor(Math.random() * 2)
+        
+        if(document.getElementById('a3').src=='http://127.0.0.1:5500/xe3.png'){
+            if(radom==0){document.getElementById('a3').src='m3.png'}else{document.getElementById('a3').src='g3.png'}
+        }else if(document.getElementById('a3').src=='http://127.0.0.1:5500/m3.png'){
+                if(radom==0){document.getElementById('a3').src='xe3.png'}else{document.getElementById('a3').src='g3.png'}
+            }else{if(radom==0){document.getElementById('a3').src='xe3.png'}else{document.getElementById('a3').src='m3.png'}}
+            if(document.getElementById('a1').src=='http://127.0.0.1:5500/xe1.png'&& document.getElementById('a2').src=='http://127.0.0.1:5500/xe2.png'&&document.getElementById('a3').src=='http://127.0.0.1:5500/xe3.png'){
+            alert('chucmung')}
+        if(document.getElementById('a1').src=='http://127.0.0.1:5500/m1.png'&& document.getElementById('a2').src=='http://127.0.0.1:5500/m2.png'&&document.getElementById('a3').src=='http://127.0.0.1:5500/m3.png'){
+            alert('chucmung')}
+        if(document.getElementById('a1').src=='http://127.0.0.1:5500/g1.png'&& document.getElementById('a2').src=='http://127.0.0.1:5500/g2.png'&&document.getElementById('a3').src=='http://127.0.0.1:5500/g3.png'){
+            alert('chucmung')}
+        }
+        </script>
+</body>
+</html>

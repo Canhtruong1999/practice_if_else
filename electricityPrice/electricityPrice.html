@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="electricityPrice" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<table>
+    <tr>
+        <td><input type="number" id="elec">Nhập số điện đã sử dụng</td>
+    </tr>
+    <tr>
+        <td><button onclick="eleprice()">giá tiền</button>  </td>
+    </tr>
+    <tr>
+        <td ><input id="price" type="text" readonly></td>
+    </tr>
+</table>
+<script>
+    function eleprice() {
+        let ep=document.getElementById("elec").value;
+        let result =0;
+        if(ep<0){alert('moi nhap lai')
+        }   else if(ep<=50){
+            result=ep*1678;
+        }else if(ep<=100){
+            result=83900+(ep-50)*1734
+        }else if(ep<=200){
+            result=170600+(ep-100)*2014
+        }else if(ep<=300){
+            result=372000+(ep-200)*2536
+        }else if(ep<=400){
+            result=625600+(ep-300)*2834
+        }else {
+            result=909900+(ep-400)*2927
+        }
+        document.getElementById("price").value=result
+     }
+    // function eleprice() {
+    //     let ep=document.getElementById("elec").value;
+    //     let result =0;
+    //     switch (true) {
+    //         case (ep>0 && ep<=50):{
+    //             result=ep*1678;  
+    //             break;}
+    //         case ep>50 && ep<=100:{
+    //             result=83900+(ep-50)*1734;
+    //             break;}
+    //         case ep>100 && ep<=200:{
+    //             result=170600+(ep-100)*2014;
+    //             break;}
+    //         case ep>200 && ep<=300:{
+    //             result=372000+(ep-200)*2536;
+    //             break;}
+    //         case ep>300 && ep<=400:{
+    //             result=625600+(ep-300)*2834;
+    //             break;}
+    //         case ep>400:{
+    //             result=909900+(ep-400)*2927;
+    //             break;}
+        
+    //         default:{
+    //             alert('nhập lại ')
+    //             break;}
+    //      }
+    //      document.getElementById("price").value=result
+    //  }
+    function eleprice() {
+        let ep=document.getElementById("elec").value;
+        let result =`${ep<0?'nhập lại':
+                    ep<=50 ?ep*1678:
+                    ep<=100 ?83900+(ep-50)*1734:
+                    ep<=200 ?170600+(ep-100)*2014:
+                    ep<=300 ?372000+(ep-200)*2536:
+                    ep<=400 ?625600+(ep-300)*2834:909000+(ep-400)*2927}`+' vnd'
+                    
+
+
+                    document.getElementById("price").value=result
+    } 
+</script>
+</body>
+</html>
