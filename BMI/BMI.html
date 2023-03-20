@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>Cân nặng(kg):<input type="number" id="weight" ></p>
+    <p>Chiều cao(m):<input type="number" id="height"></p>
+    <p><button type="button" onclick="bmi()">Kết quả là</button></p>
+    <p><input type="text" id="result" readonly ></p>
+</body>
+<script>
+   
+    function bmi() {
+        let w=document.getElementById("weight").value
+        let h=document.getElementById("height").value
+        let result=''
+        let bmi=w/(h*h)
+        
+        if(bmi<18.5){result='Underweight'}
+        else if (bmi<25.0){result='Nomal'}
+        else if(bmi<30.0){result='Overweight'}
+        else{result='Obese'}
+        document.getElementById("result").value=result;
+    }
+</script>
+</html>

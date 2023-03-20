@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table>
+        <tr>
+            <td>nhập a: <input type="nuber" id="num1"></td>
+        </tr>
+        <tr>
+            <td>nhập b: <input type="nuber" id="num2"></td>
+        </tr>
+        <tr>
+            <td>nhập c: <input type="nuber" id="num3"></td>
+        </tr>
+        <tr>
+            <td><button onclick="check()">check</button></td>
+        </tr>
+        <tr>
+            <td>result <input type="text" id="result"></td>
+        </tr>
+    </table>
+    <script>
+        function check() {
+            let a=document.getElementById("num1").value 
+            let b=document.getElementById("num2").value 
+            let c=document.getElementById("num3").value 
+            let result=''
+            if(a>b){
+                if(a>c){result='giá trị lớn nhất là:'+a}
+                else{result='giá trị lớn nhất là'+c}
+            }else if(b>c){
+                result='giá trị lớn nhất là'+b}
+                else{result='giá trị lớn nhất là'+c}
+                document.getElementById("result").value=result
+                
+            }           
+    </script>
+</body>
+</html>

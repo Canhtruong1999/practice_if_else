@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table>
+        <tbody>
+            <tr>
+                <td>Nhập lương: </td>
+                <td><input type="number" name="" id="wage"></td>
+            </tr>
+            <tr>
+                <td><button onclick="check()">result</button></td>
+            </tr>
+            <tr>
+                <td>Số thuế phải nộp</td>
+                <td><input type="text" name="" id="result"></td>
+            </tr>
+        </tbody>
+    </table>
+    <script>
+        function check() {
+            let w=document.getElementById("wage").value 
+            let result=''
+            if(w<0){result='nhập lại lương'}
+            else if(w<=5000000){
+                result=w*(5/100)
+            }
+            else if(w<=10000000){
+                result=(w*(10/100))-0.25*1000000
+            }
+            else if(w<=32000000){
+                result=(w*(20/100))-1.65*1000000
+            }
+            else if(w<=52000000){
+                result=(w*(25/100))-3.25*1000000
+            }
+            else if(w<=80000000){
+                result=(w*(30/100))-5.85*1000000
+            }else{result=(w*(35/100))-9.85*1000000}
+            document.getElementById("result").value=result
+        }
+    </script>
+</body>
+</html>

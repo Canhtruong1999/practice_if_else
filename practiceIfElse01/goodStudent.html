@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table>
+        <tbody>
+            <tr>
+                <td>Nhập điểm kiểm tra </td>
+                <td><input type="number" id="dk"></td>
+            </tr>
+            <tr>
+                <td>Nhập điểm thi giữa kì</td>
+                <td><input type="number" id="gk"></td>
+            </tr>
+            <tr>
+                <td>Nhập điểm thi cuối kì</td>
+                <td><input type="number" id="ck"></td>
+            </tr>
+            <tr>
+                <td>
+                    <button onclick="check()">result</button>
+                </td>
+            </tr>
+            <tr>
+                <td><input type="text" name="" id="result"></td>
+            </tr>
+
+        </tbody>
+    </table>
+    <script>
+        function check() {
+            let dk=+document.getElementById("dk").value
+            let gk=+document.getElementById("gk").value
+            let ck=+document.getElementById("ck").value
+            let result=''
+            let ave=(dk+gk*2+ck*3)/6
+            if((dk<0)||(dk>10)||(gk<0)||(gk>10)||(ck<0)||(ck>10)){
+                result='Nhập lại điểm'
+            }else{
+                if(ave>=8){
+                    result='giỏi'
+                }else if(ave>=7){
+                    result='khá'
+                }else if(ave>=6){
+                    result='trung bình'
+                }else{result='yếu'}
+            }
+            document.getElementById("result").value=result
+        }
+    </script>
+</body>
+</html>
